@@ -29,7 +29,7 @@ This project predicts exam scores (0-100) for students based on 19 features incl
 
 ### Installation
 ```bash
-git clone <repo>
+git clone https://github.com/nickrussell2025/student-exam-score-prediction.git
 cd midterm-project
 uv sync
 ```
@@ -46,7 +46,7 @@ uv run predict.py
 
 ### Run API Locally
 ```bash
-uv run uvicorn app:app --reload
+uv run uvicorn app:app --reload --port 8000
 ```
 
 Visit `http://localhost:8000/docs` for interactive API docs.
