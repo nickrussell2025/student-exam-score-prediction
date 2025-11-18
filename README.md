@@ -21,45 +21,68 @@ This project predicts exam scores (0-100) for students based on 19 features incl
 | Ridge Regression | 2.469 | 0.616 |
 | Random Forest | 2.694 | 0.543 |
 
-## Running Locally
+## Quick Start
 
 ### Prerequisites
 - Python 3.12+
 - UV package manager
+- Docker (optional, for containerization)
 
 ### Installation
 ```bash
 git clone https://github.com/nickrussell2025/student-exam-score-prediction.git
-cd midterm-project
-uv sync
+cd student-exam-score-prediction
+make install
 ```
 
-### Train Model
+### Using Make Commands
+
+**Model Training & Testing:**
+```bash
+make train        # Train the model
+make predict      # Test prediction locally
+```
+
+**Run API Locally:**
+```bash
+make serve        # Start FastAPI server on port 8000
+make test-local   # Test the local endpoint (run in another terminal)
+```
+
+Visit http://localhost:8000/docs for interactive API documentation.
+
+
+**Docker:**
+```bash
+make build        # Build Docker image
+make run          # Run container locally on port 8080
+```
+
+**Cloud Deployment:**
+```bash
+make deploy       # Build, push, and deploy to Cloud Run
+```
+
+### Manual Commands (without Make)
+
+**Train Model:**
 ```bash
 uv run train.py
 ```
 
-### Test Prediction
+**Test Prediction:**
 ```bash
 uv run predict.py
 ```
 
-### Run API Locally
+**Run API Locally:**
 ```bash
 uv run uvicorn app:app --reload --port 8000
 ```
 
-Visit `http://localhost:8000/docs` for interactive API docs.
-
-## Docker
-
-### Build
+**Docker:**
 ```bash
 docker build -t student-score-api .
-```
-
-### Run
-```bash
 docker run -p 8080:8080 student-score-api
 ```
 
