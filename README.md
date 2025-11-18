@@ -8,7 +8,7 @@ This project predicts exam scores (0-100) for students based on 19 features incl
 
 ## Dataset
 
-- **Source:** [Kaggle - Student Performance Factors](link)
+- **Source:** [Kaggle - Student Performance Factors](https://www.kaggle.com/datasets/mosapabdelghany/student-performance-factors-dataset/data)
 - **Size:** 6,607 students
 - **Features:** 19 (6 numerical, 13 categorical)
 - **Target:** exam_score (continuous)
